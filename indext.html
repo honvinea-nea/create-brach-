@@ -1,11 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Document</title>
+     <title>Sign In</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+               min-height: 100vh;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .container {
+               width: 100%;
+               max-width: 400px;
+               background: white;
+               padding: 40px;
+               border-radius: 10px;
+               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+          }
+
+          .header {
+               text-align: center;
+               margin-bottom: 30px;
+          }
+
+          .header h1 {
+               color: #333;
+               font-size: 28px;
+               margin-bottom: 10px;
+          }
+
+          .header p {
+               color: #999;
+               font-size: 14px;
+          }
+
+          .form-group {
+               margin-bottom: 20px;
+          }
+
+          label {
+               display: block;
+               margin-bottom: 8px;
+               color: #333;
+               font-weight: 500;
+               font-size: 14px;
+          }
+
+          input[type="email"],
+          input[type="password"] {
+               width: 100%;
+               padding: 12px 15px;
+               border: 2px solid #e0e0e0;
+               border-radius: 5px;
+               font-size: 14px;
+               transition: border-color 0.3s ease;
+          }
+
+          input[type="email"]:focus,
+          input[type="password"]:focus {
+               outline: none;
+               border-color: #667eea;
+          }
+
+          .forgot-password {
+               text-align: right;
+               margin-bottom: 20px;
+          }
+
+          .forgot-password a {
+               color: #667eea;
+               text-decoration: none;
+               font-size: 13px;
+               transition: color 0.3s ease;
+          }
+
+          .forgot-password a:hover {
+               color: #764ba2;
+          }
+
+          .signin-btn {
+               width: 100%;
+               padding: 12px;
+               background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+               color: white;
+               border: none;
+               border-radius: 5px;
+               font-size: 16px;
+               font-weight: 600;
+               cursor: pointer;
+               transition: transform 0.2s ease, box-shadow 0.2s ease;
+          }
+
+          .signin-btn:hover {
+               transform: translateY(-2px);
+               box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+          }
+
+          .signin-btn:active {
+               transform: translateY(0);
+          }
+
+          .signup-link {
+               text-align: center;
+               margin-top: 20px;
+               color: #999;
+               font-size: 14px;
+          }
+
+          .signup-link a {
+               color: #667eea;
+               text-decoration: none;
+               font-weight: 600;
+               transition: color 0.3s ease;
+          }
+
+          .signup-link a:hover {
+               color: #764ba2;
+          }
+
+          .remember-me {
+               display: flex;
+               align-items: center;
+               margin-bottom: 20px;
+          }
+
+          input[type="checkbox"] {
+               margin-right: 8px;
+               cursor: pointer;
+          }
+
+          .remember-me label {
+               margin: 0;
+               cursor: pointer;
+               color: #666;
+          }
+     </style>
 </head>
+
 <body>
-     <p>Today we are study branch</p>
+     <div class="container">
+          <div class="header">
+               <h1>Welcome Back</h1>
+               <p>Sign in to your account</p>
+          </div>
+
+          <form>
+               <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+               </div>
+
+               <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+               </div>
+
+               <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+               </div>
+
+               <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+               </div>
+
+               <button type="submit" class="signin-btn">Sign In</button>
+
+               <div class="signup-link">
+                    Don't have an account? <a href="#">Sign Up</a>
+               </div>
+          </form>
+     </div>
 </body>
+
 </html>
